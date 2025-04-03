@@ -15,7 +15,7 @@ app.post('/webhook', async (req, res) => {
         const respostaChatGPT = await axios.post(
             'https://api.openai.com/v1/chat/completions',
             {
-                model: 'gpt-4', 
+                model: 'gpt-3.5-turbo', // Alterado de gpt-4 para gpt-3.5-turbo
                 messages: [{ role: 'user', content: perguntaUsuario }],
             },
             {
